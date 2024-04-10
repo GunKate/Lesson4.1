@@ -1,8 +1,11 @@
 a = 6 # создание переменной
 b = 8
 
-if a > b
+if a > b:
     print ("а больше чем b")
 
-elif b>a
+elif b>a:
     print("b больше чем a")
+
+else:
+    print("а = b")
