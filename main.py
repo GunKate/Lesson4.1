@@ -9,3 +9,5 @@ elif b>a:
 
 else:
     print("а = b")
+
+print ("Это нам не нужно")
