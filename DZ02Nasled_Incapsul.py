@@ -75,12 +75,17 @@ admin = Admin(3, 'Кирилл')
 admin.add_user(user_list, user1)
 admin.add_user(user_list, user2)
 
+# проверка доступов, функция не работает
+# add_user(user_list, Admin)
+
 # Печать списка пользователей
 for user in user_list:
     print(user)
 
 # Удаление пользователя
 admin.remove_user(user_list, 1)
+# проверка доступод к удалению из списка
+# remove_user(user_list, 1)
 
 # Печать списка пользователей после удаления
 for user in user_list:
