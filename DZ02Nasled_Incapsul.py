@@ -35,7 +35,7 @@ class User:
         self.__access_level = access_level
 
     def __str__(self):
-        return f"User(ID: {self.__user_id}, Name: {self.__name}, Access Level: {self.__access_level})"
+        return f"Пользователь (ID: {self.__user_id}, Имя: {self.__name}, Уровень доступа: {self.__access_level})"
 
 class Admin(User):
     def __init__(self, user_id, name, admin_access_level='admin'):
@@ -45,17 +45,17 @@ class Admin(User):
     def add_user(self, user_list, user):
         if isinstance(user, User):
             user_list.append(user)
-            print(f"User {user.get_name()} added successfully.")
+            print(f"Пользователь {user.get_name()} добавлен.")
         else:
-            print("Invalid user instance.")
+            print(f"Ошибка: неверный пользователь.")
 
     def remove_user(self, user_list, user_id):
         for user in user_list:
             if user.get_user_id() == user_id:
                 user_list.remove(user)
-                print(f"User ID {user_id} removed successfully.")
+                print(f"Пользователь с ID {user_id} успешно удален из списка.")
                 return
-        print(f"User ID {user_id} not found.")
+        print(f"Пользователь с ID {user_id} не найден.")
 
     def __str__(self):
         return f"Admin(ID: {self.get_user_id()}, Name: {self.get_name()}, Access Level: {self.__admin_access_level})"
@@ -65,11 +65,11 @@ class Admin(User):
 user_list = []
 
 # Создание обычных пользователей
-user1 = User(1, 'Alice')
-user2 = User(2, 'Bob')
+user1 = User(1, 'Таня')
+user2 = User(2, 'Уля')
 
 # Создание администратора
-admin = Admin(3, 'Charlie')
+admin = Admin(3, 'Кирилл')
 
 # Добавление пользователей
 admin.add_user(user_list, user1)
